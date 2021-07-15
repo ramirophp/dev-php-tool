@@ -248,7 +248,7 @@ segun se le indique al constructor
 </p>
 
 <p>
-setAttr() recibe el array procesado a string<br>
+setAttrs() recibe el array procesado a string<br>
 y lo asigna a la propiedad $atributos.
 </p>
 
