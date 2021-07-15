@@ -70,3 +70,73 @@ al metodo listArticles() : $piezas->listArticles($result);
 Tambien otra opcion valida puede ser anidar estos <br>
 metodos : $piezas->listArticles($piezas->getArticles());
 </p>
+
+<hr>
+
+<h2>La clase Etiqueta</h2>
+
+<h2>Propiedades</h2>
+
+<ul>
+ <li>private $etiqueta</li>
+ <li>private $etiquetas</li>
+</ul>
+
+<h2>M&eacute;todos</h2>
+
+<em>Todos son public</em>
+
+<ol>
+    <li>__construct (string $tag)</li>
+    <li>es_valida (string $etiqueta)</li>
+    <li>setTag (bool $es_valida, string $tag)</li>
+    <li>getTag ()</li>
+</ol>
+
+<p>
+En el constructor ocurre toda la magia<br>
+y lo unico que tenemos que hacer es <br>
+pasarle un string en el momento que <br>
+instanciamos la clase Etiqueta.
+</p>
+
+<p>
+El metodo es_valida() hace una busqueta<br>
+y compara el string que le asignamos<br>
+en el constructor, en caso de encontrar<br>
+una coincidencia devuelve true de lo contrario false
+</p>
+
+<p>
+El metodo setTag() verifica si el resultado<br>
+de el metodo es_valida() retorno true<br>
+y asigna el valor que recibimos en el <br>
+constructor a la propiedad $etiqueta<br>
+de lo contrario para la ejecucion del <br>
+programa y le muestra por pantalla<br>
+el enlace donde puede checar la lista<br>
+de etiquetas validas.
+</p>
+
+<p>
+En caso que quiera agregar otra etiqueta<br>
+a la base de datos para que su programa <br>
+no pare la ejecucion realice una peticion POST<br>
+a la url : https://api.piezas.xyz/etiquetas/recursos<br>
+enviando un json con la clave name y valor : {"name":"your_tag"}
+</p>
+
+<p>
+Si todo sale bien al finalizar la busqueda<br>
+puede obtener el valor verificado con el metodo<br>
+getTag().<br>
+</p>
+
+<h2>Como Usar  a la clase Etiqueta</h2>
+
+<p>
+Lo primero siempre sera instanciar la clase<br>
+y asignarla a una variable : $tag = new Etiqueta('your_tag');<br>
+en este caso es necesario pasarle el argumento al constructor<br>
+y finalmente obtenemos el valor : $tag->getTag(); .
+</p>
