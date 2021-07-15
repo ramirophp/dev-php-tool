@@ -357,3 +357,27 @@ y content puede ser enviado como string o arreglo indexado
 con el metodo getElement() obtenemos el elmento<br>
 ya verificado y creado : $element->getElement();
 </p>
+
+<h2>La Clase XYZ y La Clase Envoltura</h2>
+
+<p>
+Ambas clases son wrappers de la clase Elemento <br>
+pero funcionan ligeramente diferentes al momento <br>
+de utilizar sus metodos.
+</p>
+
+<p>
+XYZ utiliza metodos staticos <br>
+para definir la etiqueta de apertura <br>
+y cierre por separado de algun elemento html.
+</p>
+
+<p>
+Envoltura utiliza metodos no estaticos <br>
+los cuales para ser accedidos tenemos que <br>
+crear un objeto de esta clase y la diferencia <br>
+mas notable es que la etiqueta de apertura y cierre <br>
+estan englobadas en una sola funcion y en su mayoria <br>
+las etiquetas de esta clase estaran contenidas dentro <br>
+de la estructura html(); .
+</p>
