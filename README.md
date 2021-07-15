@@ -101,7 +101,7 @@ instanciamos la clase Etiqueta.
 </p>
 
 <p>
-El metodo es_valida() hace una busqueta<br>
+El metodo es_valida() hace una busqueda<br>
 y compara el string que le asignamos<br>
 en el constructor, en caso de encontrar<br>
 una coincidencia devuelve true de lo contrario false
@@ -139,4 +139,74 @@ Lo primero siempre sera instanciar la clase<br>
 y asignarla a una variable : $tag = new Etiqueta('your_tag');<br>
 en este caso es necesario pasarle el argumento al constructor<br>
 y finalmente obtenemos el valor : $tag->getTag(); .
+</p>
+
+<hr>
+
+<h2>La clase Atributo</h2>
+
+<h2>Propiedades</h2>
+
+<ul>
+ <li>private $atributo</li>
+ <li>private $atributos</li>
+</ul>
+
+<h2>M&eacute;todos</h2>
+
+<em>Todos son public</em>
+
+<ol>
+    <li>__construct (string $attr)</li>
+    <li>es_valido (string $attr)</li>
+    <li>setAttr (bool $es_valido, string $attr)</li>
+    <li>getAttr ()</li>
+</ol>
+
+<p>
+En el constructor ocurre toda la magia<br>
+y lo unico que tenemos que hacer es <br>
+pasarle un string en el momento que <br>
+instanciamos la clase Atributo.
+</p>
+
+<p>
+El metodo es_valido() hace una busqueda<br>
+y compara el string que le asignamos<br>
+en el constructor, en caso de encontrar<br>
+una coincidencia devuelve true de lo contrario false
+</p>
+
+<p>
+El metodo setAttr() verifica si el resultado<br>
+de el metodo es_valido() retorno true<br>
+y asigna el valor que recibimos en el <br>
+constructor a la propiedad $atributo<br>
+de lo contrario para la ejecucion del <br>
+programa y le muestra por pantalla<br>
+el enlace donde puede checar la lista<br>
+de atributos validos.
+</p>
+
+<p>
+En caso que quiera agregar otro atributo<br>
+a la base de datos para que su programa <br>
+no pare la ejecucion realice una peticion POST<br>
+a la url : https://api.piezas.xyz/atributos/recursos<br>
+enviando un json con la clave name y valor : {"name":"your_attr"}
+</p>
+
+<p>
+Si todo sale bien al finalizar la busqueda<br>
+puede obtener el valor verificado con el metodo<br>
+getAttr().<br>
+</p>
+
+<h2>Como Usar  a la clase Atributo</h2>
+
+<p>
+Lo primero siempre sera instanciar la clase<br>
+y asignarla a una variable : $attr = new Atributo('your_attr');<br>
+en este caso es necesario pasarle el argumento al constructor<br>
+y finalmente obtenemos el valor : $attr->getAttr(); .
 </p>
