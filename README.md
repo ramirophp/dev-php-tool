@@ -261,3 +261,99 @@ O $attrs = new Atributos(['attr1' => 'key-value-forma','attr2' => 'value']);<br>
 en este caso es necesario pasarle el argumento al constructor<br>
 y finalmente obtenemos los atributos en formato string : $attrs->getAttrs(); .
 </p>
+
+<hr>
+
+<h2>La Clase Elemento</h2>
+
+<h2>Propiedades</h2>
+
+<ul>
+ <li>private $elemento</li>
+</ul>
+
+<h2>M&eacute;todos</h2>
+
+<em>Todos son public</em>
+
+<ol>
+    <li>__construct (array $data)</li>
+    <li>open (array $data)</li>
+    <li>content ($content, bool $js)</li>
+    <li>close (string $tag)</li>
+    <li>setElemento (string $element)</li>
+    <li>getElement ()</li>
+</ol>
+
+<p>
+En el constructor ocurre toda la magia<br>
+y lo unico que tenemos que hacer es <br>
+pasarle un array en el momento que <br>
+instanciamos la clase Elemento.
+</p>
+
+<p>
+El metodo open() nos sirve para <br>
+crear la etiqueta de apertura y cierre <br>
+en algunas situaciones.
+</p>
+
+<p>
+El metodo content() procesa <br>
+el contenido que le enviemos <br>
+en el constructor.
+</p>
+
+<p>
+El metodo close lo <br>
+utilizamos para crear <br>
+la etiqueta de cierre cuando <br>
+se requiera.
+</p>
+
+<p>
+setElemento() recibe el array <br>
+procesado a formato string y <br>
+lo asigna a la propiedad $elemento.
+</p>
+
+<h2>Como Usar la Clase Elemento</h2>
+
+<p>
+Lo primero siempre sera instanciar la clase<br>
+y asignarla a una variable : $element = new Elemento(['tag' => 'your_tag']); <br>
+en este caso es necesario pasarle el argumento al constructor<br>
+Como minimo es necesario pasarle el key => value , para definir <br>
+una etiqueta. 
+</p>
+
+<h2>Claves aceptadas</h2>
+
+<ul>
+    <li>tag</li>
+    <li>attrs</li>
+    <li>js</li>
+    <li>content</li>
+    <li>self</li>
+</ul>
+
+<p>
+self y js por default son false <br>
+una sirve para indicar que queremos <br>
+validar y crear una etiqueta selfclosing <br>
+la otra nos sirve para indicar que en <br>
+este elemento queremos aceptar el tag script en el content del elemento
+</p>
+
+<p>
+tag , attrs y content corresponden <br>
+a la anatomia de un elemento html <br>
+tag tiene que ser enviado como string, <br> 
+attrs tiene que ser enviado como array asociativo <br>
+y content puede ser enviado como string o arreglo indexado
+</p>
+
+<p>
+con el metodo getElement() obtenemos el elmento<br>
+ya verificado y creado : $element->getElement();
+</p>
