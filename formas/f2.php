@@ -31,6 +31,34 @@ XYZ::html('es');
             XYZ::_h1();
         XYZ::_header();
 
+        XYZ::nav();
+
+            XYZ::ul();
+
+                XYZ::li();
+                    XYZ::a(['href'=>'./f2.php?api=0']);echo "Articulos";XYZ::_a();
+                XYZ::_li();
+
+                XYZ::li();
+                    XYZ::a(['href'=>'./f2.php?api=1']);echo "Categorias";XYZ::_a();
+                XYZ::_li();
+
+                XYZ::li();
+                    XYZ::a(['href'=>'./f2.php?api=2']);echo "Etiquetas";XYZ::_a();
+                XYZ::_li();
+
+                XYZ::li();
+                    XYZ::a(['href'=>'./f2.php?api=3']);echo "Atributos";XYZ::_a();
+                XYZ::_li();
+
+                XYZ::li();
+                    XYZ::a(['href'=>'http://localhost']);echo "Back";XYZ::_a();
+                XYZ::_li();
+
+            XYZ::_ul();
+
+        XYZ::_nav();
+
     XYZ::_body();
 
 XYZ::_html();
