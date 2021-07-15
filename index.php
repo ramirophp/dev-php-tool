@@ -1,80 +1,111 @@
 <!DOCTYPE html>
+
 <html lang="es">
-<head>
 
-    <title>Formas de utilizar Piezas</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Free Web Api">
-    <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
-    <meta name="author" content="Ramiro Garcia Gonzalez">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
 
-</head>
+        <title>Formas de utilizar Piezas</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web Api">
+        <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
+        <meta name="author" content="Ramiro Garcia Gonzalez">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body>
+    </head>
 
-<header>
+    <body>
 
-    <h1>PAGES</h1>
+        <header>
 
-</header>
+            <h1>PAGES</h1>
 
-<nav>
+        </header>
 
-    <ul>
-        <li><a href="./?page=0">forma 1</a></li>
-        <li><a href="./?page=1">forma 2</a></li>
-        <li><a href="./?page=2">forma 3</a></li>
-    </ul>
+        <nav>
 
-</nav>
+            <ul>
+                <li><a href="./?page=0">forma 1</a></li>
+                <li><a href="./?page=1">forma 2</a></li>
+                <li><a href="./?page=2">forma 3</a></li>
+            </ul>
 
-<?php
+        </nav>
 
-define('F1','forma_1');
-define('F2','forma_2');
-define('F3','forma_3');
+        <main>
 
-$pages = [F1,F2,F3];
+            <section>
+                <h2>Vision</h2>
+                <div>
+                    <p>
+                    Crear herramientas php <br>
+                    Disponibles para aquellos desarrolladores <br>
+                    Que buscan construir una base s&oacute;lida y din&aacute;mica <br>
+                    Para cimentar sus proyectos web.
+                    </p>
+                </div>
+            </section>
 
-if (isset($_GET['page'])) {
+            <section>
+                <h2>Mision</h2>
+                <div>
+                    Convertir a dev-php-tool la herramienta <br>
+                    Referente a la cimentacion de estructuras <br>
+                    web (html) en todo el mundo.
+                </div>
+            </section>
 
-    switch ($pages[$_GET['page']]) {
+        </main>
 
-        case 'forma_1' : 
+        <section>
 
-            header('Location: ./formas/f1.php');
+            <?php
 
-        break;
+            define('F1','forma_1');
+            define('F2','forma_2');
+            define('F3','forma_3');
 
-        case 'forma_2' : 
+            $pages = [F1,F2,F3];
 
-            header('Location: ./formas/f2.php');
+            if (isset($_GET['page'])) {
 
-        break;
+                switch ($pages[$_GET['page']]) {
 
-        case 'forma_3' : 
+                    case 'forma_1' : 
 
-            header('Location: ./formas/f3.php');
+                        header('Location: ./formas/f1.php');
 
-        break;
+                    break;
 
-    }
+                    case 'forma_2' : 
 
-}
+                        header('Location: ./formas/f2.php');
 
-?>
+                    break;
 
-<footer>
+                    case 'forma_3' : 
 
-<h2>
+                        header('Location: ./formas/f3.php');
 
-    Hello World.
+                    break;
 
-</h2>
+                }
 
-</footer>
+            }
 
-</body>
+            ?>
+
+        </section>
+
+        <footer>
+
+            <h2>
+
+                Hello World.
+
+            </h2>
+
+        </footer>
+
+    </body>
 
 </html>

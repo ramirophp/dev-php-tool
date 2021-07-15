@@ -144,6 +144,12 @@
 
                 </h2>
 
+                <div>
+                    <a href="https://github.com/ramirophp/dev-php-tool/blob/main/formas/f1.php">
+                        Ver Estructura - forma 1
+                    </a>
+                </div>
+
         </footer>
 
     </body>
