@@ -23,4 +23,14 @@ XYZ::html('es');
 
     XYZ::_head();
 
+    XYZ::body();
+
+        XYZ::header();
+            XYZ::h1();
+                echo "Piezas";
+            XYZ::_h1();
+        XYZ::_header();
+
+    XYZ::_body();
+
 XYZ::_html();

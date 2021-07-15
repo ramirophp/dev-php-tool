@@ -40,7 +40,7 @@ class Etiqueta {
 
         } else {
 
-            die('Error: <a href="https://mis.piezas.xyz?api=2">Valid tags list</a>');
+            die('Error: '.$tag.' <a href="https://mis.piezas.xyz?api=2">Valid tags list</a>');
 
         }
 

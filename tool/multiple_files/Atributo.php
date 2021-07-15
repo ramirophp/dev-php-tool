@@ -41,7 +41,7 @@ class Atributo {
 
         } else {
 
-            die('Error: <a href="https://mis.piezas.xyz?api=3">Valid attrs list</a>');
+            die('Error: '.$attr.' <a href="https://mis.piezas.xyz?api=3">Valid attrs list</a>');
 
         }
 

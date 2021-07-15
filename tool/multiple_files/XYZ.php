@@ -90,4 +90,104 @@ class XYZ {
 
     }
 
+    public static function body (array $attrs = []) {
+
+        if(empty($attrs)) {
+
+            $tag = new Elemento([
+                'tag' => 'body',
+                'self' => true
+            ]);
+
+        }else{
+
+            $tag = new Elemento([
+                'tag' => 'body',
+                'attrs' => $attrs,
+                'self' => true
+            ]);
+
+        }
+        
+        
+        echo $tag->getElement();
+
+    }
+
+    public static function _body () {
+
+        $tag = new Elemento([
+            'tag' => 'body'
+        ]);
+        
+        echo $tag->close('body');
+
+    }
+
+    public static function header (array $attrs = []) {
+
+        if(empty($attrs)) {
+
+            $tag = new Elemento([
+                'tag' => 'header',
+                'self' => true
+            ]);
+
+        }else{
+
+            $tag = new Elemento([
+                'tag' => 'header',
+                'attrs' => $attrs,
+                'self' => true
+            ]);
+
+        }
+        
+        echo $tag->getElement();
+
+    }
+
+    public static function _header () {
+
+        $tag = new Elemento([
+            'tag' => 'header'
+        ]);
+        
+        echo $tag->close('header');
+
+    }
+
+    public static function h1 (array $attrs = []) {
+
+        if(empty($attrs)) {
+
+            $tag = new Elemento([
+                'tag' => 'h1',
+                'self' => true
+            ]);
+
+        }else{
+
+            $tag = new Elemento([
+                'tag' => 'h1',
+                'attrs' => $attrs,
+                'self' => true
+            ]);
+
+        }
+        
+        echo $tag->getElement();
+
+    }
+
+    public static function _h1 () {
+
+        $tag = new Elemento([
+            'tag' => 'h1'
+        ]);
+        
+        echo $tag->close('h1');
+
+    }
+
 }
