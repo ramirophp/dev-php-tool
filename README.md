@@ -210,3 +210,54 @@ y asignarla a una variable : $attr = new Atributo('your_attr');<br>
 en este caso es necesario pasarle el argumento al constructor<br>
 y finalmente obtenemos el valor : $attr->getAttr(); .
 </p>
+
+<hr>
+
+<h2>La Clase Atributos</h2>
+
+<h2>Propiedades</h2>
+
+<ul>
+ <li>private $atributos</li>
+</ul>
+
+<h2>M&eacute;todos</h2>
+
+<em>Todos son public</em>
+
+<ol>
+    <li>__construct (array $atributos)</li>
+    <li>toString (array $atributos)</li>
+    <li>setAttrs (string $attrs)</li>
+    <li>getAttrs ()</li>
+</ol>
+
+<p>
+En el constructor ocurre toda la magia<br>
+y lo unico que tenemos que hacer es <br>
+pasarle un array en el momento que <br>
+instanciamos la clase Atributos.
+</p>
+
+<p>
+El metodo toString() procesa el arreglo<br>
+recibido y crea un string de atributos<br>
+en formato single-word : "attr1 attr2"<br>
+o en formato key => value : "attr1='value' attr2='value'"<br>
+segun se le indique al constructor
+</p>
+
+<p>
+setAttr() recibe el array procesado a string<br>
+y lo asigna a la propiedad $atributos.
+</p>
+
+<h2>Como Usar la Clase Atributos</h2>
+
+<p>
+Lo primero siempre sera instanciar la clase<br>
+y asignarla a una variable : $attrs = new Atributos(['!' => 'single-word-format attr1 attr2']);<br>
+O $attrs = new Atributos(['attr1' => 'key-value-forma','attr2' => 'value']);<br>
+en este caso es necesario pasarle el argumento al constructor<br>
+y finalmente obtenemos los atributos en formato string : $attrs->getAttrs(); .
+</p>
