@@ -8,7 +8,10 @@ class Piezas {
 
         $sesionCurl = curl_init();
 
-        curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/articulos/registros');
+        //remote
+        #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/articulos/registros');
+        //local
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/articulos/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -30,7 +33,10 @@ class Piezas {
 
         $sesionCurl = curl_init();
 
-        curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/categorias/registros');
+        //remote
+        #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/categorias/registros');
+        //local
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/categorias/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -52,7 +58,10 @@ class Piezas {
 
         $sesionCurl = curl_init();
 
-        curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/etiquetas/registros');
+        //remote
+        #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/etiquetas/registros');
+        //local
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/etiquetas/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -74,7 +83,10 @@ class Piezas {
 
         $sesionCurl = curl_init();
 
-        curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/atributos/registros');
+        //remote
+        #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/atributos/registros');
+        //local
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/atributos/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 

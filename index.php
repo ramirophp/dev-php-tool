@@ -1,10 +1,16 @@
+<?php
+
+require_once './tool/forma_3.1.php';
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="es">
 
     <head>
 
-        <title>Formas de utilizar Piezas</title>
+        <title>Mi Blog</title>
         <meta charset="UTF-8">
         <meta name="description" content="Free Web Api">
         <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
@@ -17,12 +23,14 @@
 
         <header>
 
-            <h1>PAGES</h1>
+            <h1>My Blog</h1>
 
         </header>
 
         <nav>
-
+            <h2>
+                Estructuras Html
+            </h2>
             <ul>
                 <li><a href="./?page=0">forma 1</a></li>
                 <li><a href="./?page=1">forma 2</a></li>
