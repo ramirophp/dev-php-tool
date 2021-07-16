@@ -113,7 +113,8 @@ require_once './tool/forma_3.1.php';
             </h2>
 
             <div>
-                <a href="https://github.com/ramirophp">GitHub</a>
+                <a href="https://github.com/ramirophp">GitHub</a><br>
+                <a href="http://localhost">Back</a>
             </div>
 
         </footer>
