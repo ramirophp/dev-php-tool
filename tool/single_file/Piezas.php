@@ -11,7 +11,7 @@ class Piezas {
         //remote
         #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/articulos/registros');
         //local
-        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/articulos/registros');
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/Api/articulos/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -36,7 +36,7 @@ class Piezas {
         //remote
         #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/categorias/registros');
         //local
-        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/categorias/registros');
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/Api/categorias/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -61,7 +61,7 @@ class Piezas {
         //remote
         #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/etiquetas/registros');
         //local
-        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/etiquetas/registros');
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/Api/etiquetas/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
@@ -86,7 +86,7 @@ class Piezas {
         //remote
         #curl_setopt($sesionCurl,CURLOPT_URL,'https://api.piezas.xyz/atributos/registros');
         //local
-        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/atributos/registros');
+        curl_setopt($sesionCurl,CURLOPT_URL,'http://localhost/Api/atributos/registros');
 
         curl_setopt($sesionCurl,CURLOPT_RETURNTRANSFER,true);
 
