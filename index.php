@@ -4,7 +4,7 @@
 
     <head>
 
-        <title>Formas de utilizar Piezas</title>
+        <title>Formas de utilizar Piezas dev-php-tool</title>
         <meta charset="UTF-8">
         <meta name="description" content="Free Web Api">
         <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
