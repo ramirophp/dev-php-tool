@@ -69,6 +69,18 @@ class Envoltura {
 
     }
 
+    public function img(array $attrs) {
+
+        $tag = new Elemento([
+            'tag' => 'img',
+            'attrs' => $attrs,
+            'self' => true
+        ]);
+        
+        return $tag->getElement();
+
+    }
+
     public function link(array $attrs) {
 
         $tag = new Elemento([
@@ -316,6 +328,29 @@ class Envoltura {
 
             $tag = new Elemento([
                 'tag' => 'div',
+                'attrs' => $attrs,
+                'content' => $content
+            ]);
+
+        }
+        
+        return $tag->getElement();
+
+    }
+
+    public function span ($content = '',array $attrs = []) {
+
+        if(empty($attrs)) {
+
+            $tag = new Elemento([
+                'tag' => 'span',
+                'content' => $content
+            ]);
+
+        }else{
+
+            $tag = new Elemento([
+                'tag' => 'span',
                 'attrs' => $attrs,
                 'content' => $content
             ]);

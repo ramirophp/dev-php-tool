@@ -1,6 +1,7 @@
 <?php
 
 require_once './tool/forma_3.1.php';
+require_once './tool/hacks/hacks.php';
 
 $evta = new Envoltura;
 
@@ -18,11 +19,18 @@ $evta = new Envoltura;
         <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
         <meta name="author" content="Ramiro Garcia Gonzalez">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php echo $evta->link([
+        <?php 
+        echo $evta->link([
             'rel' => 'stylesheet', 
             'type' => 'text/css', 
             'href' => './blog/css/main.css'
-        ]); ?>
+        ]); 
+        echo $evta->link([
+            'rel' => 'stylesheet', 
+            'type' => 'text/css', 
+            'href' => './blog/css/font/flaticon.css'
+        ]);
+        ?>
 
     </head>
 
@@ -30,19 +38,41 @@ $evta = new Envoltura;
 
         <header>
 
-            <h1>My Blog</h1>
+            <!--<h1>My Blog</h1>-->
             
             <?php
-            echo $evta->section();
+            echo $evta->section($evta->div([
+                links([
+                    $evta->span(null,['class'=>'flaticon-002-twitter']) => '#',
+                    $evta->span(null,['class'=>'flaticon-011-instagram']) => '#'
+                ],$evta)
+            ],['class'=>'icons']),[
+                'class'=>'header-icons-container'
+            ]);
             echo $evta->nav([
-                $evta->section($evta->a('logo',['href'=>'#'])),
-                $evta->section($evta->a('Sobre',['href'=>'./blog/perfil.php']))
+                $evta->section(
+                    $evta->a([
+                        '<h1>My Blog</h1>',
+                        $evta->img([
+                            'alt' => 'Logotipo',
+                            'src' => './blog/assets/php-power-micro.png'
+                        ])
+                    ]),[
+                        'class'=>'nav-logo-container',
+                        'href'=>'#'
+                    ]
+                ),
+                $evta->section($evta->a('Sobre Mi',[
+                    'href'=>'./blog/perfil.php'
+                ]),[
+                    'class'=>'profile-link'
+                ])
             ]);
             ?>
 
         </header>
 
-        <nav>
+        <nav class="nav">
             <h2>
                 Estructuras Html
             </h2>
@@ -128,7 +158,7 @@ $evta = new Envoltura;
             </h2>
 
             <div>
-                <a href="https://github.com/ramirophp">GitHub</a><br>
+                <a href="https://github.com/ramirophp">GitHub</a>
                 <a href="http://localhost">Back</a>
             </div>
 
