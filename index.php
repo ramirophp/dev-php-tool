@@ -2,6 +2,8 @@
 
 require_once './tool/forma_3.1.php';
 
+$evta = new Envoltura;
+
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +18,11 @@ require_once './tool/forma_3.1.php';
         <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
         <meta name="author" content="Ramiro Garcia Gonzalez">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php echo $evta->link([
+            'rel' => 'stylesheet', 
+            'type' => 'text/css', 
+            'href' => './blog/css/main.css'
+        ]); ?>
 
     </head>
 
@@ -24,6 +31,14 @@ require_once './tool/forma_3.1.php';
         <header>
 
             <h1>My Blog</h1>
+            
+            <?php
+            echo $evta->section();
+            echo $evta->nav([
+                $evta->section($evta->a('logo',['href'=>'#'])),
+                $evta->section($evta->a('Sobre',['href'=>'./blog/perfil.php']))
+            ]);
+            ?>
 
         </header>
 

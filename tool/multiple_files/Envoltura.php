@@ -69,6 +69,18 @@ class Envoltura {
 
     }
 
+    public function link(array $attrs) {
+
+        $tag = new Elemento([
+            'tag' => 'link',
+            'attrs' => $attrs,
+            'self' => true
+        ]);
+        
+        return $tag->getElement();
+
+    }
+
     public function header ($content = '',array $attrs = []) {
 
         if(empty($attrs)) {
